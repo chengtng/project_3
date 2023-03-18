@@ -59,10 +59,11 @@ Azure and AWS offers a myriad of cloud services and many are similar with one an
 - Testing data size: 3000+. <br>
 
 They are saved in csv format as follows: <br>
-![AWS subreddit posts](./data/aws_subreddit.csv): <br>
-![Azure subreddit posts](./data/azure_subreddit.csv): <br>
+![AWS subreddit posts](data/aws_subreddit.csv): <br>
+![Azure subreddit posts](data/azure_subreddit.csv): <br>
 
-- Original Features:  <br>
+Original Features:  <br>
+
 |Feature|Description|Type|
 |---|---|---|
 |subreddit|classification of the subreddit|string|
@@ -71,9 +72,9 @@ They are saved in csv format as follows: <br>
 |selftext|Description of the post |string|
 |utc_datetime_str|Timestamp when post is created|string|
 
-- Word Cloud after cleaning data:
-![AWS Word Cloud](./data/aws_wc.png): <br>
-![Azure Word Cloud](./data/az_wc.png): <br>
+Word Cloud after cleaning data: <br>
+![AWS Word Cloud](images/aws_wc.png): <br>
+![Azure Word Cloud](images/az_wc.png): <br>
 
 ## 1.4. Overview ##    
 [[back to the top]](#table-of-contents)

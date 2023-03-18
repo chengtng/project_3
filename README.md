@@ -62,7 +62,7 @@ They are saved in csv format as follows: <br>
 [AWS subreddit posts](data/aws_subreddit.csv) <br>
 [Azure subreddit posts](data/az_subreddit.csv) <br>
 
-Original Features:  <br>
+**Original Features:**  <br>
 
 |Feature|Description|Type|
 |---|---|---|
@@ -72,9 +72,12 @@ Original Features:  <br>
 |selftext|Description of the post |string|
 |utc_datetime_str|Timestamp when post is created|string|
 
-Word Cloud after cleaning data: <br>
+**Word Cloud after cleaning data:** <br>
 ![AWS Word Cloud](images/aws_wc.png) <br>
 ![Azure Word Cloud](images/az_wc.png) <br>
+
+Data collection notebook can be found [here](code/nlp_data.ipynb) <br>
+Exploratory Data Analysis and Data cleaning notebook can be found [here](code/nlp_eda.ipynb) <br>
 
 ## 1.4. Overview ##    
 [[back to the top]](#table-of-contents)
@@ -88,16 +91,16 @@ Word Cloud after cleaning data: <br>
 ## 2.1. Training and evaluation results ##
 [[back to the top]](#table-of-contents)
 
-Feature engineering to prepare the predictors:
+**Feature engineering** to prepare the predictors:
 1. Count Vectoriser
 2. TF-IDF Vectoriser improves on Count Vectoriser. Similar to Count Vectoriser, in taking frequency of words, but places less emphasis on common words. 
 
 <br>
 
-The baseline model is a simple model that checks if keyword "Aws" and "Azure" exists in the post to determine the post classification. <br>
+**The baseline model** is a simple model that checks if keyword "Aws" and "Azure" exists in the post to determine the post classification. <br>
 ![Logic for baseline model](images/base.png) <br>
 
-Estimators for tuning and training to improve on the baseline model: <br> 
+**Estimators** for tuning and training to improve on the baseline model: <br> 
 1. Naive Bayes
 * We vectorise the text into a frequency vector before passing it into a Naive Bayes model for classification. 
 * Naive Bayes classifier is based on features being independent of one another. 
@@ -120,6 +123,7 @@ Estimators for tuning and training to improve on the baseline model: <br>
 ## 2.2. Model Selection and Conclusion ##
 [[back to the top]](#table-of-contents)
 
+**Summary of model scores:**
 ![Models evaluation summary](images/summary.png) <br>
 
 * The priority is to classify AWS services related requests to be routed to company’s support and DevOps team for triaging and response. 
@@ -128,11 +132,15 @@ Estimators for tuning and training to improve on the baseline model: <br>
 ![ROC for Logistic Regression](images/roc.png) <br>
 * Model have a good chance of distinguishing between 2 classes. AUC (Area under curve) is 0.99, indicating less overlap of the classes.
 
-Conclusion:
+**Conclusion:**
 * By using Logistic Regression, we can improve classification accuracy of AWS related IT request to the correct support team from 81% to 96%.
 * Time saved in handshaking IT requests between different teams. 
 
-Future Exploration: <br>
+<br>
+
+Data collection notebook can be found [here](code/nlp_data.ipynb) <br>
+
+**Future Exploration:** <br>
 1. Adding a more granularity to the category to predict for more fine tuned requests routing to support, DevOps team. 
 2. Feeding AWS and Azure documentation corpus into the machine learning model for a more comprehensive coverage.
 3. Additional derived features might give some insights to priority of the content.

@@ -13,7 +13,7 @@ This project aims to apply web scraping and NLP concepts to classify comments re
     2.2. [Model Selection and Conclusion](#22-model-selection-and-conclusion) <br>
 <br>
 
-# 2. Project Description
+# 1. Project Description
 [[back to the top]](#table-of-contents)
 
 ## 1.1. Problem Statement ##

@@ -3,15 +3,18 @@
 This project aims to apply web scraping and NLP concepts to classify comments related to AWS and Azure cloud services under General Assembly DSI course. 
 
 # Table of contents
-1. [Project description](#1-project-description)
+1. [Project description](#1-project-description) <br>
     1.1. [Problem Statement](#11-problem-statement) <br>
     1.2. [Background](#12-background) <br>
-    1.3. [Dataset](#13-dataset)  <br>
+    1.3. [Data](#13-data)  <br>
     1.4. [Overview](#14-overview)  <br>
-2. [Results and learnings](#2-results-and-learnings)  
-    2.1. [Training and evaluation results](#21-training-and-evaluation-results)    
-    2.2. [Insights and Conclusions](#22-insights-and-conclusions)
+2. [Results and learnings](#2-results-and-learnings) <br>
+    2.1. [Training and evaluation results](#21-training-and-evaluation-results) <br>
+    2.2. [Model Selection and Conclusion](#22-model-selection-and-conclusion) <br>
 <br>
+
+# 2. Project Description
+[[back to the top]](#table-of-contents)
 
 ## 1.1. Problem Statement ##
 [[back to the top]](#table-of-contents)
@@ -56,8 +59,8 @@ Azure and AWS offers a myriad of cloud services and many are similar with one an
 - Testing data size: 3000+. <br>
 
 They are saved in csv format as follows: <br>
-* [AWS subreddit posts](./data/aws_subreddit.csv): <br>
-* [Azure subreddit posts](./data/azure_subreddit.csv): <br>
+![AWS subreddit posts](./data/aws_subreddit.csv): <br>
+![Azure subreddit posts](./data/azure_subreddit.csv): <br>
 
 - Original Features:  <br>
 |Feature|Description|Type|
@@ -69,8 +72,8 @@ They are saved in csv format as follows: <br>
 |utc_datetime_str|Timestamp when post is created|string|
 
 - Word Cloud after cleaning data:
-* [AWS Word Cloud](./data/aws_wc.png): <br>
-* [Azure Word Cloud](./data/az_wc.png): <br>
+![AWS Word Cloud](./data/aws_wc.png): <br>
+![Azure Word Cloud](./data/az_wc.png): <br>
 
 ## 1.4. Overview ##    
 [[back to the top]](#table-of-contents)
@@ -86,10 +89,11 @@ They are saved in csv format as follows: <br>
 
 Feature engineering to prepare the predictors:
 1. Count Vectoriser
-2. TF-IDF Vectoriser improves on Count Vectoriser. Similar to Count Vectoriser, in taking frequency of words, but places less emphasis on common words.
+2. TF-IDF Vectoriser improves on Count Vectoriser. Similar to Count Vectoriser, in taking frequency of words, but places less emphasis on common words. 
 
+<br>
 
-The baseline model is a simple model that checks if keyword "Aws" and "Azure" exists in the post to determine the post classification. 
+The baseline model is a simple model that checks if keyword "Aws" and "Azure" exists in the post to determine the post classification. <br>
 ![Logic for baseline model](images/base.png) <br>
 
 Estimators for tuning and training to improve on the baseline model: <br> 

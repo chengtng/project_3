@@ -3,7 +3,7 @@
 This project aims to apply web scraping and NLP concepts to classify comments related to AWS and Azure cloud services under General Assembly DSI course. 
 
 # Table of contents
-1. [Project description](#1-project-description) <br>
+1. [Project Description](#1-project-description) <br>
     1.1. [Problem Statement](#11-problem-statement) <br>
     1.2. [Background](#12-background) <br>
     1.3. [Data](#13-data)  <br>
@@ -51,7 +51,7 @@ Azure and AWS offers a myriad of cloud services and many are similar with one an
 
 <br>
 
-## 1.3. Data Exploration ##    
+## 1.3. Data ##    
 [[back to the top]](#table-of-contents)
 
 - For this project, data have scraped 5000 posts from r/aws and r/azure each using pushshift API. <br>

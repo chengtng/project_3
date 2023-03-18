@@ -126,6 +126,8 @@ Exploratory Data Analysis and Data cleaning notebook can be found [here](code/nl
 **Summary of model scores:**
 ![Models evaluation summary](images/summary.png) <br>
 
+Model evaluation notebook can be found [here](code/nlp_model.ipynb) <br>
+
 * The priority is to classify AWS services related requests to be routed to company’s support and DevOps team for triaging and response. 
 * Logistic Regression model is selected as it has the highest TPR of 0.966.
 
@@ -137,8 +139,6 @@ Exploratory Data Analysis and Data cleaning notebook can be found [here](code/nl
 * Time saved in handshaking IT requests between different teams. 
 
 <br>
-
-Data collection notebook can be found [here](code/nlp_data.ipynb) <br>
 
 **Future Exploration:** <br>
 1. Adding a more granularity to the category to predict for more fine tuned requests routing to support, DevOps team. 
